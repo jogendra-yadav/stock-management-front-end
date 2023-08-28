@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router'; // Import the Router
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router'; // Import the Router
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  apiHost = environment.apiHost;
   username: string = '';
   password: string = '';
 
@@ -19,7 +21,7 @@ export class LoginComponent {
       password: this.password
     };
     
-    const apiUrl = 'http://localhost:3000/login/'; // Replace with your actual API URL
+    const apiUrl = this.apiHost + '/login/'; // Replace with your actual API URL
 
     this.http.post(apiUrl, loginData).subscribe(
       (response: any) => {

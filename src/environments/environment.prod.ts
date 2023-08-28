@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiHost: 'https://stock-management-isfphguxh-jogendra-yadav-ymailcom.vercel.app',
 };

@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiHost: 'https://stock-management-isfphguxh-jogendra-yadav-ymailcom.vercel.app',
 };
 
 /*
