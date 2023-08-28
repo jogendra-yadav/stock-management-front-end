@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { baseUrl } from '../environments/environment';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,6 @@ export class ProductDataService {
 
     const headers = new HttpHeaders().set('x-access-token', token);
 
-    return this.http.get<any[]>(`${baseUrl}/product/list/`, { headers });
+    return this.http.get<any[]>(`${environment.baseUrl}/product/list/`, { headers });
   }
 }
