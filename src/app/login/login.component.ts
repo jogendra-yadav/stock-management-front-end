@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; // Import the Router
+import { Router, NavigationEnd } from '@angular/router'; // Import the Router
 import { environment } from '../../environments/environment';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from '../auth-service.service';

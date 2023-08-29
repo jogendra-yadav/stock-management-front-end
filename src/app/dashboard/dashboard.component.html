@@ -1,23 +1,5 @@
-<h2>Welcome to the Stock Dashboard!</h2>
-<p>This is your secure dashboard content.</p>
-<button (click)="logout()">Logout</button>
-
-<div *ngIf="productData.length > 0">
-    <h3>Product Table</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Stock</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let product of productData">
-          <td>{{ product.productCode }}</td>
-          <td>{{ product.productName }}</td>
-          <td>{{ product.productStock }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<mat-card>
+  <mat-card-content>
+    <app-product></app-product>
+  </mat-card-content>
+</mat-card>
