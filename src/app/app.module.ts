@@ -22,6 +22,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ProductComponent,
     FooterComponent,
     SidebarComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatTableModule,
     MatGridListModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

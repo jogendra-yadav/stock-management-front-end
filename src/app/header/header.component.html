@@ -1,8 +1,17 @@
 <mat-toolbar color="primary" *ngIf="hideHeaderAndFooter">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
+    <button [routerLink]="['/dashboard']" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>donut_small</mat-icon>
     </button>
     <span>Stock Manager</span>
     <span class="example-fill-remaining-space"></span>
-    <button mat-raised-button type="button" (click)="logout()">Logout</button>
+    <button mat-button [matMenuTriggerFor]="productMenu"><mat-icon>my_library_books</mat-icon> Products</button>
+    <mat-menu #productMenu="matMenu" xPosition="after">
+        <button mat-menu-item [routerLink]="['/product/add']"><mat-icon>add_circle</mat-icon>Add Product</button>
+        <button mat-menu-item [routerLink]="['/product/view']"><mat-icon>pageview</mat-icon>View Product</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="settingMenu">Setting <mat-icon>settings</mat-icon></button>
+    <mat-menu #settingMenu="matMenu" xPosition="after">
+        <button (click)="logout()" mat-menu-item>Logout</button>
+    </mat-menu>
+    <!-- <button mat-raised-button type="button" (click)="logout()">Logout</button> -->
 </mat-toolbar>
