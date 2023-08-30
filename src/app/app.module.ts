@@ -21,7 +21,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+// import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { AddProductComponent } from './add-product/add-product.component';
 
@@ -33,8 +33,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     HeaderComponent,
     ProductComponent,
     FooterComponent,
-    SidebarComponent,
-    AddProductComponent,
+    // SidebarComponent,
+    // AddProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +55,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     MatGridListModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    // SidebarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

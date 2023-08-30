@@ -1,1 +1,44 @@
-<p>add-product works!</p>
+<mat-card-title>Add Product</mat-card-title>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Code</mat-label>
+      <input type="text" matInput [formControl]="requiredFormControl" [errorStateMatcher]="matcher"
+             placeholder="Ex. PW000">
+      <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      <mat-error *ngIf="!requiredFormControl.hasError('required')">
+        Please enter a valid Product code
+      </mat-error>
+      <mat-error *ngIf="requiredFormControl.hasError('required')">
+        Product code is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput [formControl]="requiredFormControl" [errorStateMatcher]="matcher"
+             placeholder="Ex. Headlight">
+      <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      <mat-error *ngIf="!requiredFormControl.hasError('required')">
+        Please enter a valid product name
+      </mat-error>
+      <mat-error *ngIf="requiredFormControl.hasError('required')">
+        Product name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Stock</mat-label>
+      <input type="text" matInput [formControl]="requiredFormControl" [errorStateMatcher]="matcher"
+             placeholder="Ex. 100">
+      <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      <mat-error *ngIf="!requiredFormControl.hasError('required')">
+        Please enter a valid product stock
+      </mat-error>
+      <mat-error *ngIf="requiredFormControl.hasError('required')">
+        Product stock is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Save Product</button>
+  </form>
